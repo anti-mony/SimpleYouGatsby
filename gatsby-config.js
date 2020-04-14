@@ -22,7 +22,7 @@ module.exports = {
         short_name: `SB`,
         start_url: `/`,
         background_color: `#663399`,
-        theme_color: `#e0e0e0`,
+        theme_color: `#0d47a1`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },

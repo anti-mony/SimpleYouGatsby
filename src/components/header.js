@@ -15,6 +15,8 @@ import {
   MenuItem,
 } from "@material-ui/core"
 
+import { List, Code } from "@material-ui/icons"
+
 import MenuIcon from "@material-ui/icons/Menu"
 
 const Header = ({ siteTitle }) => {
@@ -43,19 +45,32 @@ const Header = ({ siteTitle }) => {
     link: {
       textDecoration: "none",
     },
+    menu: {
+      color: "#000",
+    },
+    margins: {
+      marginLeft: 4,
+      marginRight: 4,
+    },
   }
 
   const navLinks = [
     <Link fade to="/Blog" style={styles.link}>
-      <Button>Blog</Button>
+      <Button>
+        <List style={styles.margins} />
+        Blog
+      </Button>
     </Link>,
     <Link fade to="/Projects" style={styles.link}>
-      <Button>Projects</Button>
+      <Button>
+        <Code style={styles.margins} />
+        Projects
+      </Button>
     </Link>,
   ]
 
   return (
-    <AppBar position="sticky" style={{ background: "#e0e0e0" }}>
+    <AppBar position="sticky" style={{ background: "#1e88e5" }}>
       <Toolbar>
         <Box
           display="flex"
@@ -65,13 +80,22 @@ const Header = ({ siteTitle }) => {
           p={1}
         >
           <img src={icon} alt="Site Logo" style={styles.logo} />
-          <Box flexGrow={1}>
-            <Link fade to="/" style={{ textDecoration: "none" }}>
-              <Typography variant="h5" style={styles.textBlack}>
+          <Box>
+            <Link
+              fade
+              to="/"
+              style={{ textDecoration: "none", outline: "none" }}
+            >
+              <Typography
+                variant="h2"
+                style={styles.textBlack}
+                component="strong"
+              >
                 {siteTitle}
               </Typography>
             </Link>
           </Box>
+          <Box flexGrow={1}></Box>
           <Hidden smDown>{navLinks}</Hidden>
           <Hidden smUp>
             <IconButton style={styles.textBlack} onClick={handleClick}>
