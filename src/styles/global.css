@@ -16,7 +16,10 @@ body {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   flex: 1 0 auto;
+  padding: 16px;
 }
 
 .footer {
@@ -31,5 +34,5 @@ body {
 }
 
 .iconColor {
-  color: #546e7a;
+  color: #00897b;
 }
