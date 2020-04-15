@@ -15,8 +15,7 @@ import {
   MenuItem,
 } from "@material-ui/core"
 
-import { List, Code } from "@material-ui/icons"
-
+import { List, Code, Fingerprint } from "@material-ui/icons"
 import MenuIcon from "@material-ui/icons/Menu"
 
 const Header = ({ siteTitle }) => {
@@ -67,36 +66,42 @@ const Header = ({ siteTitle }) => {
         Projects
       </Button>
     </Link>,
+    <Link fade to="/About" style={styles.link}>
+      <Button>
+        <Fingerprint style={styles.margins} />
+        About
+      </Button>
+    </Link>,
   ]
 
   return (
-    <AppBar position="sticky" style={{ background: "#1e88e5" }}>
+    <AppBar position="sticky" style={{ background: "#b0bec5" }}>
       <Toolbar>
         <Box
           display="flex"
           alignItems="center"
           justifyContent="center"
           flexGrow={1}
-          p={1}
+          mt={2}
+          mb={2}
         >
           <img src={icon} alt="Site Logo" style={styles.logo} />
           <Box>
             <Link
               fade
               to="/"
-              style={{ textDecoration: "none", outline: "none" }}
+              style={{
+                textDecoration: "none",
+                outline: "none",
+              }}
             >
-              <Typography
-                variant="h2"
-                style={styles.textBlack}
-                component="strong"
-              >
+              <Typography variant="h5" style={styles.textBlack}>
                 {siteTitle}
               </Typography>
             </Link>
           </Box>
           <Box flexGrow={1}></Box>
-          <Hidden smDown>{navLinks}</Hidden>
+          <Hidden xsDown>{navLinks}</Hidden>
           <Hidden smUp>
             <IconButton style={styles.textBlack} onClick={handleClick}>
               <MenuIcon />
@@ -108,7 +113,9 @@ const Header = ({ siteTitle }) => {
               onClose={handleClose}
             >
               {navLinks.map(l => (
-                <MenuItem onClick={handleClose}>{l}</MenuItem>
+                <MenuItem onClick={handleClose} dense={true}>
+                  {l}
+                </MenuItem>
               ))}
             </Menu>
           </Hidden>

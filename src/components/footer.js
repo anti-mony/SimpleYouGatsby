@@ -1,6 +1,6 @@
 import React from "react"
 import { Paper, IconButton, Typography } from "@material-ui/core"
-import { Facebook, Twitter, LinkedIn, Email, GitHub } from "@material-ui/icons"
+import { Twitter, LinkedIn, Email, GitHub } from "@material-ui/icons"
 
 const Footer = () => {
   return (
@@ -13,13 +13,10 @@ const Footer = () => {
           <IconButton href="https://www.github.com/anti-mony">
             <GitHub fontSize="large" className="iconColor" />
           </IconButton>
-          <IconButton href="https://www.linkedin.in/sushant-bansal">
+          <IconButton href="https://www.linkedin.com/in/sushant-bansal/">
             <LinkedIn fontSize="large" className="iconColor" />
           </IconButton>
-          <IconButton href="https://www.github.com/anti-mony">
-            <Facebook fontSize="large" className="iconColor" />
-          </IconButton>
-          <IconButton href="https://www.github.com/anti-mony">
+          <IconButton href="https://www.twitter.com/__antimony__">
             <Twitter fontSize="large" className="iconColor" />
           </IconButton>
         </div>
