@@ -36,3 +36,7 @@ body {
 .iconColor {
   color: #00897b;
 }
+
+.justifyText {
+  text-align: justify;
+}

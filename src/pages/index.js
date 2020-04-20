@@ -16,11 +16,13 @@ const IndexPage = () => (
       alignItems="center"
       flexGrow={1}
     >
-      <Box style={{ minWidth: "200px", width: "20%" }} p={1}>
+      <Box style={{ minWidth: "200px", width: "25%", padding: "16px" }} p={1}>
         <Image />
       </Box>
 
-      <Typography variant="h2">Hi, I'm</Typography>
+      <Typography variant="h3" style={{ fontWeight: "light" }}>
+        Hi, I'm
+      </Typography>
       <Typography
         variant="h2"
         component="p"
