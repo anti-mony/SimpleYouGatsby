@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useState, Fragment } from "react"
 import icon from "../images/icon.png"
 
 import {
@@ -54,24 +54,39 @@ const Header = ({ siteTitle }) => {
   }
 
   const navLinks = [
-    <Link fade to="/Blog" style={styles.link}>
-      <Button>
-        <List style={styles.margins} />
-        Blog
-      </Button>
-    </Link>,
-    <Link fade to="/Projects" style={styles.link}>
-      <Button>
-        <Code style={styles.margins} />
-        Projects
-      </Button>
-    </Link>,
-    <Link fade to="/About" style={styles.link}>
-      <Button>
-        <Fingerprint style={styles.margins} />
-        About
-      </Button>
-    </Link>,
+    {
+      id: 1,
+      nav: (
+        <Link to="/Blog" style={styles.link}>
+          <Button>
+            <List style={styles.margins} />
+            Blog
+          </Button>
+        </Link>
+      ),
+    },
+    {
+      id: 2,
+      nav: (
+        <Link to="/Projects" style={styles.link}>
+          <Button>
+            <Code style={styles.margins} />
+            Projects
+          </Button>
+        </Link>
+      ),
+    },
+    {
+      id: 3,
+      nav: (
+        <Link to="/About" style={styles.link}>
+          <Button>
+            <Fingerprint style={styles.margins} />
+            About
+          </Button>
+        </Link>
+      ),
+    },
   ]
 
   return (
@@ -88,7 +103,6 @@ const Header = ({ siteTitle }) => {
           <img src={icon} alt="Site Logo" style={styles.logo} />
           <Box>
             <Link
-              fade
               to="/"
               style={{
                 textDecoration: "none",
@@ -101,7 +115,11 @@ const Header = ({ siteTitle }) => {
             </Link>
           </Box>
           <Box flexGrow={1}></Box>
-          <Hidden xsDown>{navLinks}</Hidden>
+          <Hidden xsDown>
+            {navLinks.map(navItem => (
+              <Fragment key={navItem.id}>{navItem.nav}</Fragment>
+            ))}
+          </Hidden>
           <Hidden smUp>
             <IconButton style={styles.textBlack} onClick={handleClick}>
               <MenuIcon />
@@ -112,9 +130,9 @@ const Header = ({ siteTitle }) => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              {navLinks.map(l => (
-                <MenuItem onClick={handleClose} dense={true}>
-                  {l}
+              {navLinks.map(nav => (
+                <MenuItem onClick={handleClose} dense={true} key={nav.id}>
+                  {nav.nav}
                 </MenuItem>
               ))}
             </Menu>

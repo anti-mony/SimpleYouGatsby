@@ -1,5 +1,5 @@
 import React from "react"
-import { Paper, IconButton, Typography } from "@material-ui/core"
+import { Paper, IconButton } from "@material-ui/core"
 import { Twitter, LinkedIn, Email, GitHub } from "@material-ui/icons"
 
 const Footer = () => {

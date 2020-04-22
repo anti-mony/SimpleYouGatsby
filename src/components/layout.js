@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     setChecked(true)
   }, [children])
 
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(true)
 
   return (
     <div className="root">
