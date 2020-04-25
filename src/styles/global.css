@@ -45,6 +45,10 @@ body {
   margin: 16px 0;
 }
 
+.blog-item {
+  margin: 16px 0;
+}
+
 .clean-link {
   text-decoration: none;
 }

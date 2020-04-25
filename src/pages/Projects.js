@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <Container display="flex">
+      <Container>
         <Typography
           variant="h1"
           style={{ fontWeight: "bold", textAlign: "center" }}

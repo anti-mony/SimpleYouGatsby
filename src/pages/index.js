@@ -16,7 +16,7 @@ const IndexPage = () => (
       alignItems="center"
       flexGrow={1}
     >
-      <Box style={{ minWidth: "200px", width: "20%", padding: "16px" }} p={1}>
+      <Box style={{ minWidth: "180px", width: "20%", padding: "16px" }} p={1}>
         <Image />
       </Box>
 

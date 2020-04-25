@@ -1,6 +1,6 @@
-import React, { Fragment } from "react"
+import React from "react"
 
-import { Typography, Grid, IconButton, Chip, Button } from "@material-ui/core"
+import { Typography, Grid, IconButton, Chip } from "@material-ui/core"
 
 const ProjectItem = ({ data }) => {
   const { title, icon, text, link, tag, blog } = data
