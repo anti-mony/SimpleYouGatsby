@@ -1,5 +1,5 @@
 ---
-path: "testPost"
+path: "/blog/testPost"
 title: "Test Post"
 subtitle: "Test Post Subtitle"
 author: "Sushant Bansal"
