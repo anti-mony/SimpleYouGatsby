@@ -4,7 +4,7 @@ import Moment from "react-moment"
 import { Box, Typography, Button } from "@material-ui/core"
 
 const BlogListItem = ({ data, taste }) => {
-  const { title, subtitle, date, tags } = data
+  const { title, subtitle, date, tags, path } = data
 
   return (
     <Box
@@ -12,9 +12,8 @@ const BlogListItem = ({ data, taste }) => {
       flexDirection="column"
       justifyContent="flex-start"
       alignItems="flex-start"
-      className="blog-item"
     >
-      <Link className="clean-link">
+      <Link className="clean-link" to={path}>
         <Typography variant="h4" style={{ fontWeight: "bold", color: "#000" }}>
           {title}
         </Typography>
@@ -35,18 +34,19 @@ const BlogListItem = ({ data, taste }) => {
       </Typography>
       <Typography variant="body1" style={{ textAlign: "justify" }}>
         {taste}
-        <Link className="clean-link">
+        <Link className="clean-link" to={path}>
           <Button>Read More</Button>
         </Link>
       </Typography>
 
       <Typography variant="body2" style={{ color: "#263238" }}>
         Tags:{" "}
-        {tags.map(tag => (
+        {tags.map((tag, index) => (
           <Typography
             variant="button"
             className="iconColor"
             style={{ marginLeft: "1rem" }}
+            key={index}
           >
             {tag}
           </Typography>

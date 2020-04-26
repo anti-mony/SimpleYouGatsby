@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogListItem from "../components/bloglistitem"
 
-import { Container, Typography } from "@material-ui/core"
+import { Container, Typography, Grid } from "@material-ui/core"
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -17,7 +17,6 @@ const Blog = () => {
             tags
             subtitle
             date
-            comments
             path
             author
           }
@@ -40,14 +39,22 @@ const Blog = () => {
       >
         Blog{" "}
       </Typography>
+      <Typography
+        variant="subtitle1"
+        style={{ textAlign: "center", marginBottom: "16px" }}
+        gutterBottom
+      >
+        This isn't strictly a tech blog. I'm not sure what I will write in the
+        future though.
+      </Typography>
       <Container>
-        {blogs.map(blog => (
-          <BlogListItem
-            data={blog.frontmatter}
-            taste={blog.excerpt}
-            key={blog.id}
-          />
-        ))}
+        <Grid container direction="row" spacing={3}>
+          {blogs.map(blog => (
+            <Grid item xs={12} md={6} key={blog.id}>
+              <BlogListItem data={blog.frontmatter} taste={blog.excerpt} />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </Layout>
   )
