@@ -56,3 +56,41 @@ body {
 .spaced-image {
   margin: 8px 0;
 }
+
+.header-background {
+  background-color: #b0bec5;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 4px 0;
+}
+
+.white-color {
+  color: #fff;
+}
+
+.black-color {
+  color: #000;
+}
+
+.logo {
+  max-width: 56px;
+  padding: 0;
+  margin: 0 8px 0 0;
+}
+
+.horizontal-margins {
+  margin: 0px 0px;
+}
+
+.vertical-margins {
+  margin: 4px 0px;
+}
+
+.flex-spacer {
+  flex: 1 0;
+}

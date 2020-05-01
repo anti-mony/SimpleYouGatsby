@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import Moment from "react-moment"
 import { Box, Typography, Button } from "@material-ui/core"
 
 const BlogListItem = ({ data, taste }) => {
@@ -27,10 +26,7 @@ const BlogListItem = ({ data, taste }) => {
         style={{ fontStyle: "italic" }}
         gutterBottom
       >
-        Posted On{" "}
-        <Moment parse="YYYY-MM-DD" format="DD MMMM, YYYY">
-          {date}
-        </Moment>
+        Posted On {date}
       </Typography>
       <Typography variant="body1" style={{ textAlign: "justify" }}>
         {taste}

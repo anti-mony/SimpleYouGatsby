@@ -16,7 +16,7 @@ const Blog = () => {
             title
             tags
             subtitle
-            date
+            date(formatString: "MMMM DD, YYYY")
             path
             author
           }
