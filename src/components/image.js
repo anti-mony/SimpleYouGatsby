@@ -27,10 +27,7 @@ const Image = () => {
   `)
 
   return (
-    <Img
-      fluid={data.myself.childImageSharp.fluid}
-      style={{ width: "100%", borderRadius: "50%" }}
-    />
+    <Img fluid={data.myself.childImageSharp.fluid} className="author-image" />
   )
 }
 

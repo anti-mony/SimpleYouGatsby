@@ -1,17 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Box, Typography, Button } from "@material-ui/core"
+import { Typography, Button } from "@material-ui/core"
 
 const BlogListItem = ({ data, taste }) => {
   const { title, subtitle, date, tags, path } = data
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent="flex-start"
-      alignItems="flex-start"
-    >
+    <div className="blog-item">
       <Link className="clean-link" to={path}>
         <Typography variant="h4" style={{ fontWeight: "bold", color: "#000" }}>
           {title}
@@ -41,14 +36,14 @@ const BlogListItem = ({ data, taste }) => {
           <Typography
             variant="button"
             className="iconColor"
-            style={{ marginLeft: "1rem" }}
+            style={{ marginLeft: "8px" }}
             key={index}
           >
             {tag}
           </Typography>
         ))}
       </Typography>
-    </Box>
+    </div>
   )
 }
 

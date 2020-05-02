@@ -7,7 +7,6 @@ import {
   AppBar,
   Toolbar,
   Button,
-  Box,
   Typography,
   Hidden,
   IconButton,
@@ -69,19 +68,19 @@ const Header = ({ siteTitle }) => {
     <AppBar position="sticky" style={{ background: "#b0bec5" }}>
       <Toolbar className="header-content">
         <img src={icon} alt="Site Logo" className="logo" />
-        <Box>
-          <Link
-            to="/"
-            style={{
-              textDecoration: "none",
-              outline: "none",
-            }}
-          >
-            <Typography variant="h5" className="black-color">
-              {siteTitle}
-            </Typography>
-          </Link>
-        </Box>
+
+        <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            outline: "none",
+          }}
+        >
+          <Typography variant="h5" className="black-color">
+            {siteTitle}
+          </Typography>
+        </Link>
+
         <div className="flex-spacer"></div>
         <Hidden xsDown>
           {navLinks.map(navItem => (

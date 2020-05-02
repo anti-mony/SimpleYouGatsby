@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Box, Fade } from "@material-ui/core"
+import { Fade } from "@material-ui/core"
 import Header from "./header"
 import Footer from "./footer"
 
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
     <div className="root">
       <Header siteTitle={data.site.siteMetadata.title} />
       <Fade in={checked}>
-        <Box className="content">{children}</Box>
+        <div className="content">{children}</div>
       </Fade>
       <Footer />
     </div>

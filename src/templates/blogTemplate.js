@@ -14,11 +14,11 @@ const BlogTemplate = ({ data }) => {
     <Layout>
       <SEO title={title} />
       <Container>
-        <Typography variant="h2" style={{ fontWeight: "bold", color: "#000" }}>
-          {title}
+        <Typography variant="h2">
+          <div className="bold-text black-color">{title}</div>
         </Typography>
-        <Typography variant="h5" style={{ fontWeight: "lighter" }} gutterBottom>
-          {subtitle}
+        <Typography variant="h5" gutterBottom>
+          <div className="lighter-text">{subtitle}</div>
         </Typography>
         <Typography
           variant="subtitle2"
@@ -28,17 +28,12 @@ const BlogTemplate = ({ data }) => {
         >
           Posted On {date}
         </Typography>
-        <Markdown style={{ textAlign: "justify" }}>{html}</Markdown>
-        <Typography variant="body2" style={{ color: "#263238" }}>
-          Tags:{" "}
+        <Markdown className="justify-text">{html}</Markdown>
+        <Typography variant="body2" className="tag-container tag-color">
+          <div>Tags: </div>
           {tags.map((tag, index) => (
-            <Typography
-              variant="button"
-              className="iconColor"
-              style={{ marginLeft: "8px" }}
-              key={index}
-            >
-              {tag}
+            <Typography variant="button" className="iconColor" key={index}>
+              <div className="horizontal-margins">{tag}</div>
             </Typography>
           ))}
         </Typography>

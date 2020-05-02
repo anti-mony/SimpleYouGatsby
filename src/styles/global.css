@@ -84,7 +84,7 @@ body {
 }
 
 .horizontal-margins {
-  margin: 0px 0px;
+  margin: 0px 4px;
 }
 
 .vertical-margins {
@@ -93,4 +93,57 @@ body {
 
 .flex-spacer {
   flex: 1 0;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.author-image {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.index-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.index-image {
+  min-width: 200px;
+  width: 25%;
+  padding: 16px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.light-text {
+  font-weight: lighter;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+.tag-color {
+  color: #263238;
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: 1;
 }

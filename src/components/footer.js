@@ -4,7 +4,7 @@ import { Twitter, LinkedIn, Email, GitHub } from "@material-ui/icons"
 
 const Footer = () => {
   return (
-    <Paper className="footer" elevation={1}>
+    <Paper className="footer" elevation={2}>
       <div className="footerContent">
         <div>
           <IconButton href="mailto:hi@sushantb.dev">

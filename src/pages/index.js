@@ -4,41 +4,31 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
 
-import { Box, Typography } from "@material-ui/core"
+import { Typography } from "@material-ui/core"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-      flexGrow={1}
-    >
-      <Box style={{ minWidth: "180px", width: "20%", padding: "16px" }} p={1}>
+    <div className="index-content">
+      <div className="index-image">
         <Image />
-      </Box>
+      </div>
 
-      <Typography variant="h3" style={{ fontWeight: "light" }}>
-        Hi, I'm
+      <Typography variant="h3">
+        <div className="light-text">Hi, I'm</div>
       </Typography>
-      <Typography
-        variant="h2"
-        component="p"
-        style={{ fontWeight: "bold", textAlign: "center" }}
-        gutterBottom
-      >
-        Sushant Bansal
+
+      <Typography variant="h2" component="p" gutterBottom>
+        <div className="center-text bold-text">Sushant Bansal</div>
       </Typography>
-      <Typography variant="body1" style={{ textAlign: "center" }}>
+      <Typography variant="body1" className="center-text">
         I'm currently a Software Engineer in the Galli Group at Pritzker School
         of Molecular Engineering, University of Chicago
       </Typography>
-      <Typography variant="body1" style={{ textAlign: "center" }}>
+      <Typography variant="body1" className="center-text">
         I listen to a lot of music, play video games and relax when I'm free.
       </Typography>
-    </Box>
+    </div>
   </Layout>
 )
 
