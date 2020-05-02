@@ -88,7 +88,11 @@ const Header = ({ siteTitle }) => {
           ))}
         </Hidden>
         <Hidden smUp>
-          <IconButton className="black-color" onClick={handleClick}>
+          <IconButton
+            className="black-color"
+            onClick={handleClick}
+            aria-label="Menu"
+          >
             <MenuIcon />
           </IconButton>
           <Menu
