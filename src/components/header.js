@@ -34,7 +34,7 @@ const Header = ({ siteTitle }) => {
       nav: (
         <Link to="/Blog" className="clean-link">
           <Button>
-            <List />
+            <List className="horizontal-margins" />
             Blog
           </Button>
         </Link>
@@ -45,7 +45,7 @@ const Header = ({ siteTitle }) => {
       nav: (
         <Link to="/Projects" className="clean-link">
           <Button>
-            <Code />
+            <Code className="horizontal-margins" />
             Projects
           </Button>
         </Link>
@@ -56,7 +56,7 @@ const Header = ({ siteTitle }) => {
       nav: (
         <Link to="/About" className="clean-link">
           <Button>
-            <Fingerprint />
+            <Fingerprint className="horizontal-margins" />
             About
           </Button>
         </Link>
