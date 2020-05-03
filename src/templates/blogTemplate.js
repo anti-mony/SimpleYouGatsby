@@ -29,8 +29,12 @@ const BlogTemplate = ({ data }) => {
           Posted On {date}
         </Typography>
         <Markdown className="justify-text">{html}</Markdown>
-        <Typography variant="body2" className="tag-container tag-color">
-          <div>Tags: </div>
+        <Typography
+          variant="body2"
+          className="tag-container tag-color"
+          component="div"
+        >
+          <div className="lotof-vertical-margins">Tags: </div>
           {tags.map((tag, index) => (
             <Typography variant="button" className="iconColor" key={index}>
               <div className="horizontal-margins">{tag}</div>

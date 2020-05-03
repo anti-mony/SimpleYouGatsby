@@ -1,5 +1,6 @@
 import React from "react"
 import ReactMarkdown from "markdown-to-jsx"
+
 import {
   ListItemText,
   Typography,
@@ -17,23 +18,50 @@ const options = {
       props: {
         gutterBottom: true,
         variant: "h1",
+        style: { marginTop: "16px" },
       },
     },
-    h2: { component: Typography, props: { gutterBottom: true, variant: "h2" } },
+    h2: {
+      component: Typography,
+      props: {
+        gutterBottom: true,
+        variant: "h2",
+        style: { marginTop: "16px" },
+      },
+    },
     h3: {
       component: Typography,
-      props: { gutterBottom: true, variant: "h4" },
+      props: {
+        gutterBottom: true,
+        variant: "h4",
+        style: { marginTop: "16px" },
+      },
     },
     h4: {
       component: Typography,
-      props: { gutterBottom: true, variant: "h5", paragraph: true },
+      props: {
+        gutterBottom: true,
+        variant: "h5",
+        style: { marginTop: "16px" },
+      },
     },
     h5: {
       component: Typography,
-      props: { gutterBottom: true, variant: "h6", paragraph: true },
+      props: {
+        gutterBottom: true,
+        variant: "h6",
+        style: { marginTop: "16px" },
+      },
     },
 
-    p: { component: Typography, props: { paragraph: true } },
+    p: {
+      component: Typography,
+      props: {
+        variant: "body1",
+        component: "div",
+        style: { marginTop: "4px", marginBottom: "4px" },
+      },
+    },
     li: {
       component: ({ ...props }) => (
         <li>

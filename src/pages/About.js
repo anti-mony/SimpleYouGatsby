@@ -12,12 +12,8 @@ const About = () => {
     <Layout>
       <SEO title="About" />
       <Container>
-        <Typography
-          variant="h1"
-          style={{ fontWeight: "bold", textAlign: "center" }}
-          gutterBottom
-        >
-          About{" "}
+        <Typography variant="h1" gutterBottom>
+          <div className="page-header">About</div>
         </Typography>
 
         {AboutList.map(section => (

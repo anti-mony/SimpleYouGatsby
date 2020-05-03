@@ -18,20 +18,20 @@ const IndexPage = () => (
         <div className="light-text">Hi, I'm</div>
       </Typography>
 
-      <Typography variant="h2" component="p" gutterBottom>
+      <Typography variant="h2" gutterBottom>
         <div className="center-text bold-text">Sushant Bansal</div>
       </Typography>
 
       <Typography variant="body1"></Typography>
 
-      <Typography variant="body1">
+      <Typography variant="body1" component="div">
         <div className="center-text">
           I'm currently a Software Engineer in the Galli Group at Pritzker
           School of Molecular Engineering, University of Chicago
         </div>
       </Typography>
 
-      <Typography variant="body1">
+      <Typography variant="body1" component="div">
         <div className="center-text">
           I listen to a lot of music, play video games and relax when I'm free.
         </div>

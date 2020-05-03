@@ -1,7 +1,7 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
+import Img from "gatsby-image"
 import React, { useState, Fragment } from "react"
-import icon from "../images/icon.png"
 
 import {
   AppBar,
@@ -18,6 +18,18 @@ import { List, Code, Fingerprint } from "@material-ui/icons"
 import MenuIcon from "@material-ui/icons/Menu"
 
 const Header = ({ siteTitle }) => {
+  const imgData = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "icon.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   const [anchorEl, setAnchorEl] = useState(null)
 
   const handleClick = event => {
@@ -67,8 +79,7 @@ const Header = ({ siteTitle }) => {
   return (
     <AppBar position="sticky" style={{ background: "#b0bec5" }}>
       <Toolbar className="header-content">
-        <img src={icon} alt="Site Logo" className="logo" />
-
+        <Img fluid={imgData.file.childImageSharp.fluid} className="logo"></Img>
         <Link
           to="/"
           style={{

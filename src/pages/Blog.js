@@ -10,7 +10,7 @@ import { Container, Typography, Grid } from "@material-ui/core"
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query blogslist {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
           frontmatter {
             title
@@ -32,22 +32,14 @@ const Blog = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <Typography
-        variant="h1"
-        style={{ fontWeight: "bold", textAlign: "center" }}
-        gutterBottom
-      >
-        Blog{" "}
+      <Typography variant="h1" className="page-header" gutterBottom>
+        <div className="page-header">Blog</div>
       </Typography>
-      <Typography
-        variant="subtitle1"
-        style={{ textAlign: "center", marginBottom: "16px" }}
-        gutterBottom
-      >
+      <Typography variant="subtitle1" className="page-subtitle" gutterBottom>
         This isn't strictly a tech blog. I'm not sure what I will write in the
         future though.
       </Typography>
-      <Container>
+      <Container className="lotof-vertical-margins">
         <Grid container direction="row" spacing={3}>
           {blogs.map(blog => (
             <Grid item xs={12} md={6} key={blog.id}>

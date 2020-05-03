@@ -11,17 +11,20 @@ const ProjectItem = ({ data }) => {
       direction="column"
       alignItems="flex-start"
       justify="space-evenly"
-      className="project-item"
+      className="lotof-vertical-margins"
     >
       <Grid item xs={12}>
         <Typography variant="h6">
-          {title} <IconButton href={link}>{icon}</IconButton>{" "}
+          {title}{" "}
+          <IconButton href={link} aria-label="Link to Source">
+            {icon}
+          </IconButton>{" "}
           {tag ? (
             <Chip
               className="iconColor"
               label={tag}
               size="small"
-              style={{ backgroundColor: "#00897b", color: "#FFF" }}
+              style={{ backgroundColor: "#00695c", color: "#FFF" }}
             />
           ) : null}
         </Typography>
