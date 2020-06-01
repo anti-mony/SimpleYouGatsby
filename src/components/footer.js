@@ -7,23 +7,23 @@ const Footer = () => {
     <Paper className="footer" elevation={2}>
       <div className="footerContent">
         <div>
-          <IconButton href="mailto:hi@sushantb.dev" aria-label="Email Me">
+          <IconButton href="mailto:" aria-label="Email Me">
             <Email fontSize="large" className="iconColor" />
           </IconButton>
           <IconButton
-            href="https://www.github.com/anti-mony"
+            href="https://www.github.com"
             aria-label="Github Profile"
           >
             <GitHub fontSize="large" className="iconColor" />
           </IconButton>
           <IconButton
-            href="https://www.linkedin.com/in/sushant-bansal/"
+            href="https://www.linkedin.com/"
             aria-label="LinkedIn Profile"
           >
             <LinkedIn fontSize="large" className="iconColor" />
           </IconButton>
           <IconButton
-            href="https://www.twitter.com/__antimony__"
+            href="https://www.twitter.com/"
             aria-label="Twitter Link"
           >
             <Twitter fontSize="large" className="iconColor" />

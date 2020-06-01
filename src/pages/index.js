@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
 
+import { IndexList } from "../data/IndexList";
+
 import { Typography } from "@material-ui/core"
 
 const IndexPage = () => (
@@ -19,21 +21,20 @@ const IndexPage = () => (
       </Typography>
 
       <Typography variant="h2" gutterBottom>
-        <div className="center-text bold-text">Sushant Bansal</div>
+        <div className="center-text bold-text">{IndexList.name.first + " " + IndexList.name.middle + " " + IndexList.name.last}</div>
       </Typography>
 
       <Typography variant="body1"></Typography>
 
       <Typography variant="body1" component="div">
         <div className="center-text">
-          I'm currently a Software Engineer in the Galli Group at Pritzker
-          School of Molecular Engineering, University of Chicago
+          {IndexList.title}
         </div>
       </Typography>
 
       <Typography variant="body1" component="div">
         <div className="center-text">
-          I listen to a lot of music, play video games and relax when I'm free.
+          {IndexList.subtitle}
         </div>
       </Typography>
     </div>

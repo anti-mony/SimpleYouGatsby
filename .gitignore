@@ -67,12 +67,3 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-
-# Ignore Blog Posts
-src/blog/
-
-# Ignore Personal Data
-src/data/
-
-# Ignore Images Too
-src/images/ 
