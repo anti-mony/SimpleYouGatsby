@@ -24,7 +24,7 @@ const ProjectItem = ({ data }) => {
               className="iconColor"
               label={tag}
               size="small"
-              style={{ backgroundColor: "#00695c", color: "#FFF" }}
+              color="secondary"
             />
           ) : null}
         </Typography>
@@ -34,7 +34,7 @@ const ProjectItem = ({ data }) => {
           {text}
           {blog ? (
             <a href={blog.link} className="clean-link">
-              <Typography variant="button">{"  "}BLOG</Typography>
+              <Typography variant="button" color="secondary">{"  "}BLOG</Typography>
             </a>
           ) : null}
         </Typography>

@@ -77,9 +77,10 @@ const Header = ({ siteTitle }) => {
   ]
 
   return (
-    <AppBar position="sticky" style={{ background: "#b0bec5" }}>
+    <AppBar position="sticky" color="primary">
       <Toolbar className="header-content">
         <Img fluid={imgData.file.childImageSharp.fluid} className="logo"></Img>
+
         <Link
           to="/"
           style={{
@@ -87,10 +88,11 @@ const Header = ({ siteTitle }) => {
             outline: "none",
           }}
         >
-          <Typography variant="h5" className="black-color">
+          <Typography variant="h5" color="textPrimary">
             {siteTitle}
           </Typography>
         </Link>
+
 
         <div className="flex-spacer"></div>
         <Hidden xsDown>
