@@ -6,7 +6,7 @@ const ProjectList = [
   {
     id: 1,
     title: "Goof Identification",
-    icon: <Code color="primary" />,
+    icon: <Code />,
     text:
       "In this project, I tried to identify goofs in the aerial images.",
     link: "#",
@@ -15,7 +15,7 @@ const ProjectList = [
   {
     id: 3,
     title: "Predicting Goof",
-    icon: <GitHub color="primary" />,
+    icon: <GitHub />,
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo sed voluptas deserunt. Illo numquam magnam assumenda adipisci explicabo fugiat maiores repudiandae, totam esse harum culpa eius dicta commodi odit maxime. Numquam, dicta facere? Ipsam, enim cupiditate tenetur illo unde veniam aspernatur nobis officiis, dolor similique voluptatum sit corrupti atque.",
     link: "#",

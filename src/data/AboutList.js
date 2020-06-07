@@ -5,7 +5,6 @@ import {
   BusinessCenterTwoTone,
   SchoolTwoTone,
   BookTwoTone,
-  BusinessCenterSharp,
 } from "@material-ui/icons"
 
 const AboutList = [

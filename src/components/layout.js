@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Fade } from "@material-ui/core"
 import Header from "./header"
 import Footer from "./footer"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
