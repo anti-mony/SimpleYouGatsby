@@ -40,6 +40,7 @@ const ThemeState = (props) => {
 
     const toggle = () => {
         dispatch({ type: "TOGGLE" })
+        localStorage.setItem("theme", state.dark ? "light" : "dark")
     }
 
     return (
