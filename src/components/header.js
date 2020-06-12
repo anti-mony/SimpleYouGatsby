@@ -1,7 +1,7 @@
 import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
-import React, { useState, Fragment } from "react"
+import React, { useState, Fragment, useContext } from "react"
 
 import {
   AppBar,
@@ -15,7 +15,9 @@ import {
 } from "@material-ui/core"
 
 import { List, Code, Fingerprint } from "@material-ui/icons"
-import MenuIcon from "@material-ui/icons/Menu"
+import { MenuTwoTone, WbSunny, NightsStay } from "@material-ui/icons/"
+
+import ThemeContext from "../theme/themeContext"
 
 const Header = ({ siteTitle }) => {
   const imgData = useStaticQuery(graphql`
@@ -29,6 +31,9 @@ const Header = ({ siteTitle }) => {
       }
     }
   `)
+
+  const themeContext = useContext(ThemeContext)
+  const { dark, toggle } = themeContext
 
   const [anchorEl, setAnchorEl] = useState(null)
 
@@ -77,9 +82,10 @@ const Header = ({ siteTitle }) => {
   ]
 
   return (
-    <AppBar position="sticky" style={{ background: "#b0bec5" }}>
+    <AppBar position="sticky" color="primary">
       <Toolbar className="header-content">
         <Img fluid={imgData.file.childImageSharp.fluid} className="logo"></Img>
+
         <Link
           to="/"
           style={{
@@ -87,12 +93,14 @@ const Header = ({ siteTitle }) => {
             outline: "none",
           }}
         >
-          <Typography variant="h5" className="black-color">
+          <Typography variant="h5" color="textPrimary">
             {siteTitle}
           </Typography>
         </Link>
 
+
         <div className="flex-spacer"></div>
+
         <Hidden xsDown>
           {navLinks.map(navItem => (
             <Fragment key={navItem.id}>{navItem.nav}</Fragment>
@@ -104,7 +112,7 @@ const Header = ({ siteTitle }) => {
             onClick={handleClick}
             aria-label="Menu"
           >
-            <MenuIcon />
+            <MenuTwoTone />
           </IconButton>
           <Menu
             anchorEl={anchorEl}
@@ -119,6 +127,9 @@ const Header = ({ siteTitle }) => {
             ))}
           </Menu>
         </Hidden>
+        <IconButton onClick={toggle}>
+          {dark ? <WbSunny /> : <NightsStay />}
+        </IconButton>
       </Toolbar>
     </AppBar>
   )

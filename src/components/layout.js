@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
     }
   `)
 
+  // On Page Change
   useEffect(() => {
     setChecked(true)
   }, [children])

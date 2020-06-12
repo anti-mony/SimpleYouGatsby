@@ -4,29 +4,29 @@ import { Twitter, LinkedIn, Email, GitHub } from "@material-ui/icons"
 
 const Footer = () => {
   return (
-    <Paper className="footer" elevation={2}>
+    <Paper className="footer" elevation={2} color="default">
       <div className="footerContent">
         <div>
           <IconButton href="mailto:" aria-label="Email Me">
-            <Email fontSize="large" className="iconColor" />
+            <Email fontSize="large" color="secondary" />
           </IconButton>
           <IconButton
             href="https://www.github.com"
             aria-label="Github Profile"
           >
-            <GitHub fontSize="large" className="iconColor" />
+            <GitHub fontSize="large" color="secondary" />
           </IconButton>
           <IconButton
             href="https://www.linkedin.com/"
             aria-label="LinkedIn Profile"
           >
-            <LinkedIn fontSize="large" className="iconColor" />
+            <LinkedIn fontSize="large" color="secondary" />
           </IconButton>
           <IconButton
             href="https://www.twitter.com/"
             aria-label="Twitter Link"
           >
-            <Twitter fontSize="large" className="iconColor" />
+            <Twitter fontSize="large" color="secondary" />
           </IconButton>
         </div>
       </div>

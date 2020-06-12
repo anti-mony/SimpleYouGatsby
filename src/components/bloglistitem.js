@@ -8,7 +8,7 @@ const BlogListItem = ({ data, taste }) => {
   return (
     <div className="blog-item">
       <Link className="clean-link" to={path}>
-        <Typography variant="h4" style={{ fontWeight: "bold", color: "#000" }}>
+        <Typography variant="h4" style={{ fontWeight: "bold" }} color="textPrimary">
           {title}
         </Typography>
       </Link>
@@ -17,7 +17,7 @@ const BlogListItem = ({ data, taste }) => {
       </Typography>
       <Typography
         variant="subtitle2"
-        className="iconColor"
+        color="secondary"
         style={{ fontStyle: "italic" }}
         gutterBottom
       >
@@ -30,12 +30,12 @@ const BlogListItem = ({ data, taste }) => {
         </Link>
       </Typography>
 
-      <Typography variant="body2" style={{ color: "#263238" }}>
+      <Typography variant="body2" color="textSecondary">
         Tags:{" "}
         {tags.map((tag, index) => (
           <Typography
             variant="button"
-            className="iconColor"
+            color="secondary"
             style={{ marginLeft: "8px" }}
             key={index}
           >
