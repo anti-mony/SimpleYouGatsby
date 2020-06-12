@@ -15,14 +15,14 @@ const BlogTemplate = ({ data }) => {
       <SEO title={title} />
       <Container>
         <Typography variant="h2">
-          <div className="bold-text black-color">{title}</div>
+          <div className="bold-text">{title}</div>
         </Typography>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h5" color="secondary" gutterBottom>
           <div className="lighter-text">{subtitle}</div>
         </Typography>
         <Typography
           variant="subtitle2"
-          className="iconColor"
+          color="secondary"
           style={{ fontStyle: "italic" }}
           gutterBottom
         >
@@ -31,12 +31,13 @@ const BlogTemplate = ({ data }) => {
         <Markdown className="justify-text">{html}</Markdown>
         <Typography
           variant="body2"
-          className="tag-container tag-color"
+          className="tag-container"
+          color="textSecondary"
           component="div"
         >
           <div className="lotof-vertical-margins">Tags: </div>
           {tags.map((tag, index) => (
-            <Typography variant="button" className="iconColor" key={index}>
+            <Typography variant="button" color="secondary" key={index}>
               <div className="horizontal-margins">{tag}</div>
             </Typography>
           ))}

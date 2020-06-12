@@ -1,4 +1,4 @@
-import React, { useReducer } from "react"
+import React, { useReducer, useEffect } from "react"
 
 import ThemeContext from "./themeContext"
 import themeReducer from "./themeReducer"
@@ -29,7 +29,28 @@ const light = createMuiTheme({
     },
 });
 
+const darkPreference = () => window.matchMedia("(prefers-color-scheme: dark)").matches === true
+
+const loadDefaultTheme = () => {
+    return localStorage.getItem("theme")
+}
+
 const ThemeState = (props) => {
+
+    // On Load
+    useEffect(() => {
+        const theme = loadDefaultTheme()
+        // Check if local theme value exists and use it.
+        if (theme !== null && theme === "dark") {
+            toggle()
+        }
+        // Get user's preference from browser use only if no local theme value exists 
+        else if (darkPreference() && theme !== "light") {
+            toggle()
+        }
+        //eslint-disable-next-line
+    }, [])
+
 
     // Initial State
     const initialState = {

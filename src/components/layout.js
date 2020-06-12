@@ -5,7 +5,6 @@ import { Fade } from "@material-ui/core"
 import Header from "./header"
 import Footer from "./footer"
 
-
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -17,6 +16,7 @@ const Layout = ({ children }) => {
     }
   `)
 
+  // On Page Change
   useEffect(() => {
     setChecked(true)
   }, [children])

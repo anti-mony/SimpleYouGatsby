@@ -1,7 +1,7 @@
 import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
-import React, { useState, Fragment, useContext, useEffect } from "react"
+import React, { useState, Fragment, useContext } from "react"
 
 import {
   AppBar,
@@ -32,28 +32,8 @@ const Header = ({ siteTitle }) => {
     }
   `)
 
-
-
   const themeContext = useContext(ThemeContext)
   const { dark, toggle } = themeContext
-
-  const darkPreference = () => window.matchMedia("(prefers-color-scheme: dark)").matches === true
-
-  const loadDefaultTheme = () => {
-    return localStorage.getItem("theme")
-  }
-
-  useEffect(() => {
-    const theme = loadDefaultTheme()
-    // Check if local theme value exists and use it.
-    if (theme !== null && theme === "dark") {
-      toggle()
-    }
-    // Get user's preference from browser use only if no local theme value exists 
-    else if (darkPreference() && theme !== "light") {
-      toggle()
-    }
-  }, [])
 
   const [anchorEl, setAnchorEl] = useState(null)
 
