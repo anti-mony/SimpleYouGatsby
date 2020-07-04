@@ -5,8 +5,8 @@ module.exports = {
     author: `Sushant Bansal`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
