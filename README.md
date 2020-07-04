@@ -2,11 +2,9 @@
 
 # Personal Website | Portfolio + Blog
 
-A very simple personal website starter. Minimal, clean and works great on any type of device written using material ui and gatsby.   
+A very simple personal website starter. Minimal, clean and works great on any type of device written using material ui and gatsby. Btw, also supports dark mode.    
 
-*Coming Soon (I really don't know when):*
-
-* Dark Theme
+*Coming Soon (No Timeline, I really don't know when):*
 
 * Commenting Engine
 
