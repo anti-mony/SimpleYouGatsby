@@ -3,6 +3,7 @@ module.exports = {
     title: `Sushant Bansal`,
     description: `Sushant, Software Developer in Chicago`,
     author: `Sushant Bansal`,
+    siteUrl: `https://sushantb.dev`,
   },
   plugins: [
     `gatsby-plugin-material-ui`,
@@ -49,6 +50,7 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
