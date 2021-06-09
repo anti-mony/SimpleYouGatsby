@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Sushant Bansal`,
-    description: `Sushant, Software Developer in Chicago`,
-    author: `Sushant Bansal`,
-    siteUrl: `https://sushantb.dev`,
+    title: `John Doe`,
+    description: `John, Goof`,
+    author: `JOhn Doe`,
+    siteUrl: `https://github.com/anti-mony/sushantb.dev`,
   },
   plugins: [
     `gatsby-plugin-material-ui`,
@@ -44,8 +44,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Sushant Bansal`,
-        short_name: `SB`,
+        name: `John Doe`,
+        short_name: `JD`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#0d47a1`,
