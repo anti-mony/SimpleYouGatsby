@@ -10,7 +10,7 @@ import { Typography } from "@material-ui/core"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title={`${IndexList.name.first} ${IndexList.name.middle} ${IndexList.name.last}`} />
     <div className="index-content">
       <div className="index-image">
         <Image />
