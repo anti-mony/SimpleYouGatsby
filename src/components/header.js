@@ -82,7 +82,7 @@ const Header = ({ siteTitle }) => {
   ]
 
   return (
-    <AppBar position="sticky" color="primary">
+    <AppBar position="static" color="transparent" elevation={0}>
       <Toolbar className="header-content">
         <Img fluid={imgData.file.childImageSharp.fluid} className="logo"></Img>
 
@@ -97,7 +97,6 @@ const Header = ({ siteTitle }) => {
             {siteTitle}
           </Typography>
         </Link>
-
 
         <div className="flex-spacer"></div>
 
