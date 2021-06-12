@@ -22,7 +22,7 @@ const NotFoundPage = () => {
   return (
     <Layout>
       <SEO title="404: Not found" />
-      <Typography variant="h1" gutterBottom>
+      <Typography variant="h2" gutterBottom>
         <div className="page-header">Uhh......</div>
       </Typography>
       <Typography variant="subtitle1">

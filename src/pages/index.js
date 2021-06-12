@@ -46,7 +46,7 @@ const IndexPage = () => {
             {IndexList.subtitle}
             <Collapse in={showMore}>{IndexList.more}</Collapse>
             {IndexList.more.length > 0 && (
-              <Button onClick={() => setShowMore(!showMore)}>
+              <Button onClick={() => setShowMore(!showMore)} aria-label="More Information">
                 {!showMore ? "more..." : " less"}
               </Button>
             )}
