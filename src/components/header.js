@@ -1,7 +1,7 @@
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import Img from "gatsby-image"
 import React, { useState, Fragment, useContext } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 import {
   AppBar,
@@ -26,25 +26,6 @@ import {
 import ThemeContext from "../theme/themeContext"
 
 const Header = ({ siteTitle }) => {
-  const logo = useStaticQuery(graphql`
-    query {
-      light: file(relativePath: { eq: "icon-light.webp" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      dark: file(relativePath: { eq: "icon-dark.webp" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
   const themeContext = useContext(ThemeContext)
   const { dark, toggle } = themeContext
 
@@ -97,15 +78,21 @@ const Header = ({ siteTitle }) => {
   return (
     <AppBar position="sticky" elevation={0} color="primary">
       <Toolbar className="header-content">
-        <Img
-          fluid={
-            dark
-              ? logo.dark.childImageSharp.fluid
-              : logo.light.childImageSharp.fluid
-          }
-          className="logo"
-        ></Img>
-
+        {dark ? (
+          <StaticImage
+            src="../images/icon-dark.webp"
+            alt="Sb, site dark theme logo"
+            placeholder="Sb, site dark theme logo"
+            className="logo"
+          />
+        ) : (
+          <StaticImage
+            src="../images/icon-light.webp"
+            alt="Sb, site light theme logo"
+            placeholder="Sb, site light theme logo"
+            className="logo"
+          />
+        )}
         <Link
           to="/"
           style={{

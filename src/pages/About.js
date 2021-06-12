@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import { Grid, Typography, Container} from "@material-ui/core"
 
@@ -10,7 +10,7 @@ import AboutList from "../data/AboutList"
 const About = () => {
   return (
     <Layout>
-      <SEO title="About" />
+      <Seo title="About" />
       <Container>
         <Typography variant="h2" gutterBottom>
           <div className="page-header">About</div>

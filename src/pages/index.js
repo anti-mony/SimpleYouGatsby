@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Image from "../components/image"
-
+import Seo from "../components/seo"
 import { IndexList } from "../data/IndexList"
 
+import { StaticImage } from "gatsby-plugin-image"
 import { Typography, Collapse, Button } from "@material-ui/core"
 
 const IndexPage = () => {
@@ -13,12 +12,17 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={`${IndexList.name.first} ${IndexList.name.middle} ${IndexList.name.last}`}
       />
       <div className="index-content">
         <div className="index-image">
-          <Image />
+          <StaticImage
+            src="../images/author.webp"
+            alt="Sushant Bansal at Navy Pier, Chicago"
+            placeholder="Sushant Bansal at Navy Pier, Chicago"
+            className="author-image"
+          />
         </div>
 
         <Typography variant="h3">
@@ -46,7 +50,10 @@ const IndexPage = () => {
             {IndexList.subtitle}
             <Collapse in={showMore}>{IndexList.more}</Collapse>
             {IndexList.more.length > 0 && (
-              <Button onClick={() => setShowMore(!showMore)} aria-label="More Information">
+              <Button
+                onClick={() => setShowMore(!showMore)}
+                aria-label="More Information"
+              >
                 {!showMore ? "more..." : " less"}
               </Button>
             )}

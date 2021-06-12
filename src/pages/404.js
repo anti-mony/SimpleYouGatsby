@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import { Typography } from "@material-ui/core"
 
@@ -21,7 +21,7 @@ const NotFoundPage = () => {
   console.log(data)
   return (
     <Layout>
-      <SEO title="404: Not found" />
+      <Seo title="404: Not found" />
       <Typography variant="h2" gutterBottom>
         <div className="page-header">Uhh......</div>
       </Typography>
@@ -32,10 +32,10 @@ const NotFoundPage = () => {
         </div>
       </Typography>
       <div className="index-content">
-        <Img
+        {/* <Img
           fluid={data.file.childImageSharp.fluid}
           className="fluid-image"
-        ></Img>
+        ></Img> */}
         <a
           className="image-credits"
           href="https://unsplash.com/@richardbrutyo?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"

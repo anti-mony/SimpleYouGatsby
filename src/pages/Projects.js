@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import ProjectItem from "../components/projectitem"
 import ProjectList from "../data/ProjectList"
 
@@ -9,7 +9,7 @@ import { Typography, Container } from "@material-ui/core"
 const Projects = () => {
   return (
     <Layout>
-      <SEO title="Projects" />
+      <Seo title="Projects" />
       <Container>
         <Typography variant="h2" className="page-header" gutterBottom>
           <div className="page-header">Projects</div>

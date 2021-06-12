@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import BlogListItem from "../components/bloglistitem"
 
 import { Container, Typography, Grid } from "@material-ui/core"
@@ -31,7 +31,7 @@ const Blog = () => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <Seo title="Blog" />
       <Typography variant="h2" className="page-header" gutterBottom>
         <div className="page-header">Blog</div>
       </Typography>

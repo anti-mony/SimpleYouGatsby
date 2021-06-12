@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Markdown from "../components/markdown"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import { Container, Typography } from "@material-ui/core"
 
@@ -12,7 +12,7 @@ const BlogTemplate = ({ data }) => {
   const { title, subtitle, date, tags } = frontmatter
   return (
     <Layout>
-      <SEO title={title} />
+      <Seo title={title} />
       <Container>
         <Typography variant="h2">
           <div className="bold-text">{title}</div>
