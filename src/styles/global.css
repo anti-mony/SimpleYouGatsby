@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   height: 100%;
-  transition: all 0.25s linear;
+  transition: all 0.125s linear;
 }
 
 #___gatsby,
@@ -70,6 +70,7 @@ body {
   justify-content: center;
   flex-grow: 1;
   margin: 4px 0;
+  padding-top: 0.5rem;
 }
 
 .white-color {
@@ -128,7 +129,7 @@ body {
 
 .index-image {
   min-width: 200px;
-  width: 25%;
+  width: 20%;
   padding: 16px;
 }
 

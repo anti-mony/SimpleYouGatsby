@@ -11,7 +11,7 @@ const Projects = () => {
     <Layout>
       <SEO title="Projects" />
       <Container>
-        <Typography variant="h1" className="page-header" gutterBottom>
+        <Typography variant="h2" className="page-header" gutterBottom>
           <div className="page-header">Projects</div>
         </Typography>
         <Typography variant="subtitle1" className="page-subtitle" gutterBottom>

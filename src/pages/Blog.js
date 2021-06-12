@@ -32,7 +32,7 @@ const Blog = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <Typography variant="h1" className="page-header" gutterBottom>
+      <Typography variant="h2" className="page-header" gutterBottom>
         <div className="page-header">Blog</div>
       </Typography>
       <Typography variant="subtitle1" className="page-subtitle" gutterBottom>

@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Grid, Typography, Container } from "@material-ui/core"
+import { Grid, Typography, Container} from "@material-ui/core"
 
 import AboutList from "../data/AboutList"
 
@@ -12,9 +12,10 @@ const About = () => {
     <Layout>
       <SEO title="About" />
       <Container>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h2" gutterBottom>
           <div className="page-header">About</div>
         </Typography>
+        
 
         {AboutList.map(section => (
           <Grid
