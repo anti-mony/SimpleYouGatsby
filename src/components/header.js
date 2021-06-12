@@ -14,14 +14,28 @@ import {
   MenuItem,
 } from "@material-ui/core"
 
-import { List, Code, Fingerprint, MenuTwoTone, WbSunny, NightsStay } from "@material-ui/icons"
+import {
+  List,
+  Code,
+  Fingerprint,
+  MenuTwoTone,
+  WbSunny,
+  NightsStay,
+} from "@material-ui/icons"
 
 import ThemeContext from "../theme/themeContext"
 
 const Header = ({ siteTitle }) => {
-  const imgData = useStaticQuery(graphql`
+  const logo = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "icon.webp" }) {
+      light: file(relativePath: { eq: "icon-light.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      dark: file(relativePath: { eq: "icon-dark.webp" }) {
         childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid
@@ -81,9 +95,16 @@ const Header = ({ siteTitle }) => {
   ]
 
   return (
-    <AppBar position="sticky" elevation={0} color='primary'>
+    <AppBar position="sticky" elevation={0} color="primary">
       <Toolbar className="header-content">
-        <Img fluid={imgData.file.childImageSharp.fluid} className="logo"></Img>
+        <Img
+          fluid={
+            dark
+              ? logo.dark.childImageSharp.fluid
+              : logo.light.childImageSharp.fluid
+          }
+          className="logo"
+        ></Img>
 
         <Link
           to="/"
