@@ -10,13 +10,13 @@ const dark = createMuiTheme({
   palette: {
     type: "dark",
     primary: {
-      main: "#424242",
+      main: "#222639",
     },
     secondary: {
       main: "#1de9b6",
     },
     background: {
-      default: "hsl(230, 25%, 18%)",
+      default: "#222639",
     },
   },
 })
@@ -24,10 +24,13 @@ const dark = createMuiTheme({
 const light = createMuiTheme({
   palette: {
     primary: {
-      main: "#b0bec5",
+      main: "#e0e0e0",
     },
     secondary: {
       main: "#00796b",
+    },
+    background: {
+      default: "#e0e0e0",
     },
   },
 })
