@@ -73,7 +73,7 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <meta name="theme-color" content={dark?"#222639":"#e0e0e0"}></meta>
+      <meta name="theme-color" content={dark?"#1a237e":"#9e9e9e"}></meta>
     </Helmet>
   )
 }

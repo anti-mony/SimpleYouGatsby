@@ -41,18 +41,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `John Doe`,
-        short_name: `JD`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#0d47a1`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.webp`, // This path is relative to the root of the site.
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
