@@ -113,10 +113,9 @@ body {
 }
 
 .fluid-image {
-  min-width: 200px;
-  width: 15%;
+  max-width: 25vh;
   padding: 16px;
-  border-radius: 1%;
+  border-radius: 2%;
 }
 
 .index-content {
