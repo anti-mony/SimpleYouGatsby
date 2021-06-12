@@ -14,8 +14,7 @@ import {
   MenuItem,
 } from "@material-ui/core"
 
-import { List, Code, Fingerprint } from "@material-ui/icons"
-import { MenuTwoTone, WbSunny, NightsStay } from "@material-ui/icons/"
+import { List, Code, Fingerprint, MenuTwoTone, WbSunny, NightsStay } from "@material-ui/icons"
 
 import ThemeContext from "../theme/themeContext"
 
@@ -82,7 +81,7 @@ const Header = ({ siteTitle }) => {
   ]
 
   return (
-    <AppBar position="static" color="transparent" elevation={0}>
+    <AppBar position="sticky" elevation={0} color='primary'>
       <Toolbar className="header-content">
         <Img fluid={imgData.file.childImageSharp.fluid} className="logo"></Img>
 
