@@ -1,6 +1,6 @@
 ![Gatsby Build CI](https://github.com/anti-mony/sushantb.dev/workflows/Gatsby%20Build%20CI/badge.svg)
 
-# Personal Website | Portfolio + Blog
+# Simple You | Portfolio + Blog Theme for GatsbyJS
 
 A very simple personal website starter. Minimal, clean and works great on any type of device written using material ui and gatsby. Btw, also supports dark mode.    
 
